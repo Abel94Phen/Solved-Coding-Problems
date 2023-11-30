@@ -4,12 +4,3 @@ class Solution:
             return [num//3 - 1,num // 3, num//3 + 1]
         else:
             return []
-            
-    
-        
-        
-        
-        
-        
-            
-        
