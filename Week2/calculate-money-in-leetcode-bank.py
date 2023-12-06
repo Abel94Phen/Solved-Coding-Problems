@@ -1,8 +1,9 @@
 class Solution:
     def totalMoney(self, n: int) -> int:
-        money_in_bank = 0
-        savings = [1,2,3,4,5,6,7]
-        for i in range(n):
-            money_in_bank += savings[i%7]
-            savings[i%7] += 1
-        return money_in_bank
+        full_weeks = n // 7
+        remaining_days = n % 7 
+
+        sum_full_weeks = 28 * full_weeks + 7 * (full_weeks - 1) * full_weeks // 2
+        sum_remaining_days = (full_weeks + full_weeks +2 + remaining_days - 1) * remaining_days // 2
+
+        return sum_full_weeks + sum_remaining_days
