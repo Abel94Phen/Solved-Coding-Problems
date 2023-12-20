@@ -3,7 +3,11 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
+        i = 0
         last = len(s) - 1
-        for i in range(len(s)//2):
-            s[i], s[last] = s[last], s[i]
+        while i < last:
+            temp = s[i]
+            s[i] = s[last]
+            s[last] = temp
+            i += 1
             last -= 1
