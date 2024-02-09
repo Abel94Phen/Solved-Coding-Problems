@@ -7,7 +7,7 @@ class Solution:
         for i in range(len(customers)):
             if customers[i] == 'N':
                 leftPenalty += 1
-            if customers[i] == 'Y':
+            elif customers[i] == 'Y':
                 rightPenalty -= 1
             
             if leftPenalty + rightPenalty < minPenalty[0]:
