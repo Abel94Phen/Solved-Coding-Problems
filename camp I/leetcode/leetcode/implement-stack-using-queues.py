@@ -5,7 +5,6 @@ class MyStack:
 
     def push(self, x: int) -> None:
         self.queue.append(x)
-        print(self.queue)
 
     def pop(self) -> int:
         for _ in range(len(self.queue) - 1):
