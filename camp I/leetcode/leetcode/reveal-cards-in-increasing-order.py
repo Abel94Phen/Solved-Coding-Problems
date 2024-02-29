@@ -3,7 +3,6 @@ class Solution:
         deck.sort()
         result = [0 for _ in range(len(deck))] 
         queue = deque(range(len(deck)))
-        print(queue)
         for card in deck:
             result[queue.popleft()] = card
             if queue:
